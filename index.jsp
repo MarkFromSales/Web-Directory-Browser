@@ -238,7 +238,7 @@
             </td>
             <td><h1>DCN Lab File Browser</h1></td>
             <td width="150px">
-                <a href="../index.html" class="button">Guacamole</a>
+                <a href="../index.html" class="button">Home</a>
             </td>
         </tr>
     </table>
