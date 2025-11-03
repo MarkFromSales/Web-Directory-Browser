@@ -236,9 +236,9 @@
             <td width="80px">
                 <img src="../img/folder.png" width="64" height="64" alt="Logo"/>
             </td>
-            <td><h1>Web File Browser</h1></td>
+            <td><h1>DCN Lab File Browser</h1></td>
             <td width="150px">
-                <a href="../index.html" class="button">Home</a>
+                <a href="../index.html" class="button">Guacamole</a>
             </td>
         </tr>
     </table>
@@ -423,9 +423,25 @@
         return "";
     }
 
+    // CUSTOM ENCODER: Preserves '/' but escapes unsafe chars
     private String enc(String s) {
-        try { return URLEncoder.encode(s, "UTF-8"); }
-        catch (Exception e) { return s; }
+        if (s == null) return "";
+        // Normalize path
+        s = s.replace("\\", "/");
+        while (s.contains("//")) s = s.replace("//", "/");
+        s = s.trim();
+        if (s.startsWith("/")) s = s.substring(1);
+        if (s.endsWith("/")) s = s.substring(s.length() - 1);
+
+        // Encode only unsafe characters in query string
+        return s.replace("%", "%25")
+                .replace(" ", "%20")
+                .replace("+", "%2B")
+                .replace("\"", "%22")
+                .replace("#", "%23")
+                .replace("&", "%26")
+                .replace("=", "%3D")
+                .replace("?", "%3F");
     }
 
     private String formatSize(long bytes) {
