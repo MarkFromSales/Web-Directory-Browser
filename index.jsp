@@ -6,7 +6,7 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="javax.servlet.ServletContext" %>
 <%@ page import="java.util.Scanner" %>
-<%-- DCN Lab File Browser - index.jsp --%>
+<%-- Web File Browser - index.jsp --%>
 
 <%
     // ROOT DIRECTORY: /files in webapp
