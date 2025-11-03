@@ -61,7 +61,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>DCN Lab File Browser</title>
+    <title>Web File Browser</title>
     <style>
         /* === Global === */
         body {
@@ -236,9 +236,9 @@
             <td width="80px">
                 <img src="../img/folder.png" width="64" height="64" alt="Logo"/>
             </td>
-            <td><h1>DCN Lab File Browser</h1></td>
+            <td><h1>Web File Browser</h1></td>
             <td width="150px">
-                <a href="../index.html" class="button">Guacamole</a>
+                <a href="../index.html" class="button">Home</a>
             </td>
         </tr>
     </table>
